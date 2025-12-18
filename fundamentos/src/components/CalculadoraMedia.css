@@ -1,0 +1,33 @@
+.calculadora-container{
+    border: 1px solid #ccc;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #424141;
+    display: flex;
+    flex-direction: column;
+}
+.input-group {
+    margin-bottom: 10px;
+}
+
+label{
+    text-align: left;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+}
+input {
+    padding: 10px;
+}
+
+.calcular-button {
+    background-color: rgb(121, 16, 16);
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.calcular-button:hover{
+    background-color: #d10101;
+}
