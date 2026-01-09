@@ -1,8 +1,17 @@
+import { useState } from 'react';
 import './App.css';
-import RenderizacaoCondicional from './components/RenderizacaoCondicional';
 
 function App() {
-
+  const alunos = [
+    {nome: "Eduardo Gomes", curso: "React", turma: "Turma 01"},
+    {nome: "Maria Clara", curso: "Java", turma: "Turma 02"},
+    {nome: "Carlos", curso: "Js", turma: "Turma 03"},
+    {nome: "José", curso: "Go", turma: "Turma 04"},
+  ]
+  const [contador, setContador] = useState();
+  function incrementarContador (){
+    setContador(contador + 1);
+  }
 
   return (
     <>
@@ -18,9 +27,19 @@ function App() {
     <MeuComponenteCSS/>
     <h2 className='title'>Teste de CSS</h2> 
     <MeuComponenteCSSDinamico/>
-    <ListaExemplo/>*/}
+    <ListaExemplo/>
     <RenderizacaoCondicional/>
-        </>
+    {alunos.map((aluno, index) => (
+        <Aluno key={index} props={aluno}/>
+      ))}
+      <Caixa>
+        <h3>informação importante</h3>
+        <p>Este componente mostra como usar o prop <code>children</code></p>
+      </Caixa>*/}
+      <h1>Você clicou {contador} vezes no botão</h1>
+      <h1>{contador} </h1>
+      <BotaoIncrementar funcao={incrementarContador}/>
+    </>
        
   )
 }
